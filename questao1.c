@@ -12,7 +12,7 @@ typedef struct {
 void coletar_dados(Estado estados[NUM_ESTADOS]) {
     for (int i = 0; i < NUM_ESTADOS; i++) {
         printf("Digite o nome do %dº estado: ", i + 1);
-        getchar();  // Limpa o buffer
+        getchar();  
         fgets(estados[i].nome, sizeof(estados[i].nome), stdin);
         estados[i].nome[strcspn(estados[i].nome, "\n")] = 0;  
 
